@@ -18,20 +18,21 @@
 </head>
 <body>
     <h1>Nacionalidade</h1>
-    Qual o país você nasceu? <input type="text" name="txt.país" id="txt.país">
+    Qual o país você nasceu? <input type="text" name="txtpais" id="txtpais">
     <input type="button" value="Verificar" onclick="relatar()">
     <div id="res"></div>
 
     <script>
         var país = 'Brasil'
         function relatar() {
-            var país = window.document.querySelector(`input#txt.país`)
-            var res = window.document.querySelector(`div#res`)
+            var país = window.document.querySelector('input#txtpais')
+            var res = window.document.querySelector('div#res')
             res.innerHTML = `<p>Olá tudo bem</p>`
-            if (país !='Brasil') {
-            res.innerHTML += `<p>Você é <strong>Estrangeiro</strong></p>`
+            
+            if (país.value !='Brasil') {
+                res.innerHTML += `<p>Você é <strong>Estrangeiro</strong></p>`
             } else {
-        res.innerHTML += `<p>Você é <strong>Brasileiro</strong></p>`
+                res.innerHTML += `<p>Você é <strong>Brasileiro</strong></p>`
             }
 
         }
